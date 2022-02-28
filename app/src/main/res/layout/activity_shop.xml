@@ -1,55 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ShopActivity"
-    android:background="#303030">
-
+    android:background="@color/white">
     <com.google.android.material.appbar.AppBarLayout
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="230dp"
+        android:background="@color/white"
         android:id="@+id/appbarlayout_id">
+
+        <include layout="@layout/main_toolbar"/>
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/collapsingtoolbar_id"
             app:layout_scrollFlags="exitUntilCollapsed|scroll"
             app:title="Anime Title"
-            app:contentScrim="?attr/colorPrimary"
+            app:contentScrim="@color/white"
             app:expandedTitleMarginStart="48dp"
             app:expandedTitleMarginEnd="64dp"
             >
 
-            <androidx.appcompat.widget.Toolbar
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"
-                android:theme="@style/ThemeOverlay.AppCompat.Light">
-            </androidx.appcompat.widget.Toolbar>
 
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="50dp"
+                android:background="@color/white"
+                android:paddingTop="20dp"
+                android:id="@+id/nura"
                 >
 
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/loading_shape"
+                    android:layout_width="140dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/img"
                     android:id="@+id/aa_thumbnail" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="130dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_margin="8dp">
 
@@ -58,7 +57,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/aa_anime_name"
-                        android:text="Anime Title"
+                        android:text="@string/sneaker_title"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
                         android:textStyle="bold"
                         android:textSize="18sp"/>
 
@@ -66,31 +67,10 @@
                         android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Category"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:text="@string/price"
                         android:id="@+id/aa_categorie"/>
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/aa_rating"
-                        android:text="0.0"
-                        android:layout_marginTop="10dp"
-                        android:background="@drawable/rating_background"
-                        android:textColor="#fff"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:drawableLeft="@drawable/ic_star_black_24dp"
-                        android:paddingRight="5dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Studio"
-                        android:layout_marginTop="5dp"
-                        android:id="@+id/aa_studio"/>
-
-
 
                 </LinearLayout>
 
@@ -104,23 +84,104 @@
     </com.google.android.material.appbar.AppBarLayout>
 
 
-    <androidx.core.widget.NestedScrollView
+    <LinearLayout
+        android:id="@+id/scroolVi"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:padding="16dp"        >
-
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_below="@+id/appbarlayout_id"
+        >
 
         <TextView
-            android:textColor="#fff"
-            android:text="Anime Description"
+            android:id="@+id/aa_description"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/aa_description"/>
+            android:text="@string/sneakers_description"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/scroolVi">
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="24dp"
+        android:text="@string/material_amp_care"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="18sp"
+        android:layout_marginStart="15dp"/>
 
-    </androidx.core.widget.NestedScrollView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:text="@string/material"
+        android:textColor="@color/black"
+        android:layout_marginStart="15dp"/>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            >
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+            <Button
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="15dp"
+                android:backgroundTint="@color/black"
+                android:text="S" />
+
+            <Button
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="15dp"
+                android:backgroundTint="@color/white"
+                android:text="M"
+                android:textColor="@color/black" />
+
+            <Button
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="15dp"
+                android:backgroundTint="@color/white"
+                android:text="L"
+                android:textColor="@color/black" />
+
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:backgroundTint="@color/white"
+                android:text="SIze guide"
+                android:textAllCaps="true"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="320dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/black"
+                android:fontFamily="sans-serif-medium"
+                android:text="+ add to cart"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

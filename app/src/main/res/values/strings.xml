@@ -29,4 +29,10 @@
     <string name="about_us_text">Our dream was to establish a fashion line that is more than mere merchandise - FCKNG FASHION is our connection on the dance floors and streets of the world.</string>
     <string name="learn_more">Learn more</string>
     <string name="all_rights_reserved">ALL RIGHTS RESERVED.</string>
+    <string name="material_amp_care"><![CDATA[Material & Care:]]></string>
+    <string name="details">Details</string>
+    <string name="sneakers_description">Sneakers Description</string>
+    <string name="price">Price</string>
+    <string name="sneaker_title">Sneaker Title</string>
+    <string name="material">• Size: 350 mm x 15 mm \n• Material: 100 % Polyester</string>
 </resources>

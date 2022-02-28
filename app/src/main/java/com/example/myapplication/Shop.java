@@ -88,7 +88,7 @@ public class Shop extends AppCompatActivity {
                         anime.setDescription(jsonObject.getString("description"));
                         anime.setPrice(jsonObject.getString("retailPrice"));
                         JSONObject img = jsonObject.getJSONObject("media");
-                        anime.setImage_url(img.getString("imageUrl"));
+                        anime.setImage_url(img.getString("smallImageUrl"));
                         lstAnime.add(anime);
 
                     } catch (JSONException e) {

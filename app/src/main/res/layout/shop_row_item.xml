@@ -1,43 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
-    android:layout_marginTop="5dp"
-    android:padding="8dp"
-    android:background="@color/black"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
     android:id="@+id/container">
 
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="match_parent"
-        android:background="@drawable/loading_shape"
-        android:id="@+id/thumbnail"/>
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="130dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_margin="8dp">
 
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="80dp"
+            android:background="@drawable/img"
+            android:layout_gravity="center"
+            android:id="@+id/thumbnail"/>
 
         <TextView
-            android:textColor="#fff"
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/anime_name"
-            android:text="Anime Title"
-            android:textStyle="bold"
+            android:text="Sneaker Title"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
             android:textSize="18sp"/>
 
         <TextView
-            android:textColor="#fff"
+            android:textColor="@color/black"
             android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Category"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"
+            android:textStyle="bold"
+            android:text="Price"
             android:id="@+id/categorie"/>
 
 
@@ -45,20 +49,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/rating"
-            android:text="0.0"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:background="@drawable/rating_background"
             android:textColor="#fff"
             android:textSize="15sp"
             android:textStyle="bold"
-            android:drawableLeft="@drawable/ic_star_black_24dp"
             android:paddingRight="5dp"/>
 
         <TextView
             android:textColor="#fff"
+            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Studio"
             android:layout_marginTop="5dp"
             android:id="@+id/studio"/>
 
