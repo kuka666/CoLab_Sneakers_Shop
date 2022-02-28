@@ -58,12 +58,12 @@ public class Shop extends AppCompatActivity {
     }
 
     public void ClickAboutUs(View view) {
-        MainActivity.redirectActivity(this,AboutUs.class);
+        MainActivity.redirectActivity(this, Login.class);
     }
 
-    public void ClickLogout(View view) {
-        MainActivity.logout(this);
-    }
+//    public void ClickLogout(View view) {
+//        MainActivity.logout(this);
+//    }
 
     @Override
     protected void onPause() {

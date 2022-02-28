@@ -1,9 +1,5 @@
 package com.example.myapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -12,14 +8,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+public class SecondActivity extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_second);
 
         drawerLayout = findViewById(R.id.drawer_layout);
     }
@@ -52,9 +52,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void ClickAboutUs(View view) {
         redirectActivity(this, Login.class);
+        if(drawerLayout.callOnClick()){
+            TextView login = findViewById(R.id.changer);
+            String name  = getIntent().getExtras().getString("LOGOUT");
+            login.setText(name);
         }
-    public void ClickAboutUs_2(View view) {
-        redirectActivity(this,Shop.class);
     }
 
     public void ClickLogout(View view) {
