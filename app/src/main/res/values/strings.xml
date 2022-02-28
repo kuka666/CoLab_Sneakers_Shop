@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">SuperMarket_Colab</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="shop">SHOP</string>
+    <string name="homepage">HOMEPAGE</string>
+    <string name="about_us">ABOUT US</string>
+    <string name="contact_us">CONTACT US</string>
+    <string name="colab">COLAB</string>
+    <string name="new_2022">NEW 2022</string>
+    <string name="collection">COLLECTION</string>
+    <string name="check_it">CHECK IT</string>
+    <string name="new_2022_collection">New 2022 collection</string>
+    <string name="follow_us_text">To stay up-to-date on all of our latest product news and sales!</string>
+    <string name="follow_us">Follow Us</string>
+    <string name="view_all">View all</string>
+    <string name="instagram">INstagram</string>
+    <string name="facebook">facebook</string>
+    <string name="newsletter">Newsletter</string>
+    <string name="news_text">Stay tuned for new collections, limited editions and special offers.</string>
+    <string name="about_us_text">Our dream was to establish a fashion line that is more than mere merchandise - FCKNG FASHION is our connection on the dance floors and streets of the world.</string>
+    <string name="learn_more">Learn more</string>
+    <string name="all_rights_reserved">ALL RIGHTS RESERVED.</string>
+</resources>
